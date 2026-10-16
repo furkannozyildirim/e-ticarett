@@ -1,0 +1,31 @@
+{
+  "name": "ecommerce-storefront",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit -p tsconfig.json && vite build",
+    "import:demo-products": "tsx scripts/import-demo-products.ts",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@mui/icons-material": "^7.3.11",
+    "@mui/material": "^7.3.11",
+    "@reduxjs/toolkit": "^2.8.2",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-redux": "^9.2.0",
+    "react-router-dom": "^7.18.4"
+  },
+  "devDependencies": {
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^4.7.0",
+    "tsx": "^4.20.3",
+    "typescript": "^7.0.2",
+    "vite": "^6.3.5"
+  }
+}
