@@ -23,10 +23,10 @@ public class SampleDataConfig {
 	private static final Logger log = LoggerFactory.getLogger(SampleDataConfig.class);
 
 	@Bean
-	CommandLineRunner loadDummyJsonProducts(ProductRepository productRepository, RestClient.Builder restClientBuilder) {
+	CommandLineRunner loadDummyJsonProducts(ProductRepository productRepository) {
 		return args -> {
 			try {
-				DummyJsonResponse catalog = restClientBuilder.build()
+				DummyJsonResponse catalog = RestClient.create()
 						.get()
 						.uri("https://dummyjson.com/products?limit=0")
 						.retrieve()
